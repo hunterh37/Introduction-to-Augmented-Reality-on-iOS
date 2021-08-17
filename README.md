@@ -1,6 +1,6 @@
 # Introduction to Augmented Reality on iOS
 
-This page is intended to be an introduction to Augmented Reality on iOS - including frameworks, best pracices, resources, and more.  Apple has created a wonderful augmented reality platform - but with technology and frameworks evolving so quickly, things can get a bit confusing.  ARKit, RealityKit, SceneKit, and Metal, are often brought up when discussing an augmented reality application.  Often times discussed in tandem with one another, or sometimes individually, this document will help provide clarity.
+This page is intended to be an introduction to Augmented Reality on iOS - including frameworks, best practices, resources, and more.  Apple has created a wonderful augmented reality platform - but with technology and frameworks evolving so quickly, things can get a bit confusing.  ARKit, RealityKit, SceneKit, and Metal, are often brought up when discussing an augmented reality application.  Often times discussed in tandem with one another, or sometimes individually, this document will help provide clarity.
 
 # Table of Contents
 

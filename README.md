@@ -13,11 +13,23 @@ This page is intended to be an introduction to Augmented Reality on iOS - includ
 ```swift
   import RealityKit
             
-  //create arview
+  //Initialize an ARView programically
   let arView = ARView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+  
+  //Or connect via IBOutlet
+  @IBOutlet weak var arView: ARView!
+  
+  //Add a .usdz object to the ARView
+  let anchor = AnchorEntity()
+  let modelEntity = try! Entity.loadModel(named: "name_of_usdz_file")  
+  anchor.addChild(modelEntity)
+  arView.scene.addAnchor(anchor)
             
 
 ```
+
+
+_Note:  Make sure to enable the **Privacy - Camera Usage Description** setting in info.plist_
 
 
 

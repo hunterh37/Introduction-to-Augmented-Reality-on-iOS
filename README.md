@@ -12,16 +12,16 @@ This page is intended to be an introduction to Augmented Reality on iOS - includ
 
 Apple’s ARKit platform was originally built on top of SceneKit — a 3D graphics framework developed for mobile games. This gave a solid foundation to  leverage SceneKit’s rendering technology to create an early platform for augmented reality applications. **RealityKit** was introduced after **ARKit and SceneKit,** as a way to simplify the workflow of creating an augmented reality application. RealityKit offers many features out of the box, such as: handling gestures, collisions, and applying real world lighting effects to objects.
 
-**ARKit**
+**ARKit** (iOS 11)
 
 **ARKit** captures devices data that is used to render objects in a realistic method - it combines device motion tracking, camera scene capture, and advanced scene processing.  SceneKit offers a way to render AR content using the data provided from ARKit.
 
-**SceneKit**
+**SceneKit** (iOS 8)
 
 **SceneKit** was originally developed for mobile games. In an augmented reality application, SceneKit uses the data from ARKit to render objects in a realistic method.  SceneKit provides a way to drill down and manage these objects, but many of the features were not created for an augmented reality application.  This is where RealityKit comes in.
 
 
-**RealityKit**
+**RealityKit** (iOS 13)
 
 **RealityKit** was created as a way to simplify the creation of building augmented reality applications. Out of the box RealityKit provides many of the features that would traditionally require manual calculations and rendering.  RealityKit allows for
 

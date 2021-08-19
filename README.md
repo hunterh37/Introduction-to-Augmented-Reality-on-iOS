@@ -7,7 +7,7 @@ This page is intended to be an introduction to Augmented Reality on iOS - includ
 
 - RealityKit + SwiftUI + Apple Silicon = ? .... Apple Glasses
 
-With such a strong augmented reality platform, it certainly seems Apple is preparing for their launch of Apple Glasses.  These tools and frameworks have been quietly brewing in the background - the major bugs, flaws, and quirks, have all been worked out. Second generation Apple Glasses could spark a consumer revolution similar to the first iPhone.
+With such a strong augmented reality platform, it certainly seems Apple is preparing for their launch of Apple Glasses.  These tools and frameworks have been quietly brewing in the background - the major bugs, flaws, and quirks, have all been worked out. Apple Glasses might spark a consumer revolution similar to the first iPhone, so developers and anyone involved in mobile app development should pay attention to this space.
 
 
 # Table of Contents

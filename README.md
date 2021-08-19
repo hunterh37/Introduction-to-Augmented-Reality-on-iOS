@@ -83,9 +83,9 @@ _Note:  Make sure to enable the **Privacy - Camera Usage Description** setting i
 -----------------
 # Resources:  
 
-** Augmented Reality iOS Timeline**
+**Augmented Reality iOS Timeline**
 
-- 2012 Vuforia Engine
+- 2012 Vuforia Engine (3rd party AR framework)
 - 2017 ARKit Introduction
 - 2018 ARKit 2
 - 2019 ARKit 3

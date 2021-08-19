@@ -8,8 +8,28 @@ This page is intended to be an introduction to Augmented Reality on iOS - includ
 - RealityKit
 - SceneKit
 
+# ARKit, SceneKit, RealityKit - What's the difference?
+
+Apple’s ARKit platform was originally built on top of SceneKit — a 3D graphics framework developed for mobile games. This gave a solid foundation to  leverage SceneKit’s rendering technology to create an early platform for augmented reality applications. **RealityKit** was introduced after **ARKit and SceneKit,** as a way to simplify the workflow of creating an augmented reality application. RealityKit offers many features out of the box, such as: handling gestures, collisions, and applying real world lighting effects to objects.
+
+**ARKit**
+
+**ARKit** captures devices data that is used to render objects in a realistic method - it combines device motion tracking, camera scene capture, and advanced scene processing.  SceneKit offers a way to render AR content using the data provided from ARKit.
+
+**SceneKit**
+
+**SceneKit** was originally developed for mobile games. In an augmented reality application, SceneKit uses the data from ARKit to render objects in a realistic method.  SceneKit provides a way to drill down and manage these objects, but many of the features were not created for an augmented reality application.  This is where RealityKit comes in.
+
+
+**RealityKit**
+
+**RealityKit** was created as a way to simplify the creation of building augmented reality applications. Out of the box RealityKit provides many of the features that would traditionally require manual calculations and rendering.  RealityKit allows for
+
+
+
 # Quick Start (RealityKit)
 
+Quickly add a .usdz file to an ```ARView```  using ```Entity.load  ```
 ```swift
   import RealityKit
             
@@ -35,14 +55,19 @@ _Note:  Make sure to enable the **Privacy - Camera Usage Description** setting i
 
 # Common Components in an Augmented Reality Application
 
-- ARSCNView - https://developer.apple.com/documentation/arkit/arscnview
-    - A view that blends virtual 3d content from SceneKit into your augmented reality experience.
+- **ARView** (RealityKit) - https://developer.apple.com/documentation/realitykit/arview
+    - _A view that displays an augmented reality experience that incorporates content from RealityKit._
+    - This is what allows us to see 3d models placed into the environment, using the camera view. 
 
-- Scene -  https://developer.apple.com/documentation/arkit/arscnview/2875547-scene
+- **ARSCNView** (ARKit + SceneKit) - https://developer.apple.com/documentation/arkit/arscnview
+    - _A view that blends virtual 3d content from SceneKit into your augmented reality experience._
+    - This is the SceneKit implementation for placing a 3d model into the environment.
+
+- **Scene** -  https://developer.apple.com/documentation/arkit/arscnview/2875547-scene
     - The SceneKit scene to be displayed in the view.
         - Can be a single 3d model, or a collection of models bundled together into a scene.
 
-- SCNNode - https://developer.apple.com/documentation/scenekit/scnnode
+- **SCNNode** - https://developer.apple.com/documentation/scenekit/scnnode
     - A structural element of a scene graph, representing a position and transform in a 3D coordinate space, to which you can attach geometry, lights, cameras, or other displayable content.
         - File types: .usdz + .reality 
 

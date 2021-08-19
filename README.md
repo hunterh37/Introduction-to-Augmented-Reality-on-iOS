@@ -2,6 +2,14 @@
 
 This page is intended to be an introduction to Augmented Reality on iOS - including frameworks, best practices, resources, and more.  Apple has created a wonderful augmented reality platform - but with technology and frameworks evolving so quickly, things can get a bit confusing.  ARKit, RealityKit, SceneKit, and Metal, are often brought up when discussing an augmented reality application.  Often times discussed in tandem with one another, or sometimes individually, this document will help provide clarity.
 
+
+# Future of Augmented Reality Applications on iOS
+
+- RealityKit + SwiftUI + Apple Silicon = ? .... Apple Glasses
+
+With such a strong augmented reality platform, it certainly seems Apple is preparing for their launch of Apple Glasses.  These tools and frameworks have been quietly brewing in the background - the major bugs, flaws, and quirks, have all been worked out. Second generation Apple Glasses could spark a consumer revolution similar to the first iPhone.
+
+
 # Table of Contents
 
 - ARKit
@@ -26,6 +34,7 @@ Apple’s ARKit platform was originally built on top of SceneKit — a 3D graphi
 **RealityKit** was created as a way to simplify the creation of building augmented reality applications. Out of the box RealityKit provides many of the features that would traditionally require manual calculations and rendering.  RealityKit allows for
 
 
+-----
 
 # Quick Start (RealityKit)
 
@@ -52,7 +61,6 @@ Quickly add a .usdz file to an ```ARView```  using ```Entity.load  ```
 _Note:  Make sure to enable the **Privacy - Camera Usage Description** setting in info.plist_
 
 
-
 # Common Components in an Augmented Reality Application
 
 - **ARView** (RealityKit) - https://developer.apple.com/documentation/realitykit/arview
@@ -72,7 +80,10 @@ _Note:  Make sure to enable the **Privacy - Camera Usage Description** setting i
         - File types: .usdz + .reality 
 
 
-# Augmented Reality iOS Timeline
+-----------------
+# Resources:  
+
+** Augmented Reality iOS Timeline**
 
 - 2012 Vuforia Engine
 - 2017 ARKit Introduction
@@ -83,9 +94,6 @@ _Note:  Make sure to enable the **Privacy - Camera Usage Description** setting i
 - 2021 RealityKit 2
 - 2021 ARKit 5
 
-
-
-# Resources:  
 
 **Apple Tools**
 - Reality Composer - found within Xcode developer menu

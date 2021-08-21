@@ -31,7 +31,12 @@ Apple’s ARKit platform was originally built on top of SceneKit — a 3D graphi
 
 **RealityKit** (iOS 13)
 
-**RealityKit** was created as a way to simplify the creation of building augmented reality applications. Out of the box RealityKit provides many of the features that would traditionally require manual calculations and rendering.  RealityKit allows for
+**RealityKit** was created as a way to simplify the creation of building augmented reality applications. Out of the box RealityKit provides many of the features that would traditionally require manual calculations and rendering. 
+
+<img src="https://user-images.githubusercontent.com/61129822/130316117-3461a071-e8db-4e43-90b9-191a7b2a278d.png" data-canonical-src="https://user-images.githubusercontent.com/61129822/130316117-3461a071-e8db-4e43-90b9-191a7b2a278d.png" width="500" height="250" />
+
+_RealityKit mapping of virtual object on table_
+
 
 
 -----

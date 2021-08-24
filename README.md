@@ -12,11 +12,12 @@ With such a strong augmented reality platform, it certainly seems Apple is prepa
 
 # Table of Contents
 
+- Comparision: ARKit + SceneKit vs RealityKit
 - ARKit
 - RealityKit
 - SceneKit
 
-# ARKit, SceneKit, RealityKit - What's the difference?
+# Comparision: ARKit, SceneKit, RealityKit - What's the difference?
 
 Apple’s ARKit platform was originally built on top of SceneKit — a 3D graphics framework developed for mobile games. This gave a solid foundation to  leverage SceneKit’s rendering technology to create an early platform for augmented reality applications. **RealityKit** was introduced after **ARKit and SceneKit,** as a way to simplify the workflow of creating an augmented reality application. RealityKit offers many features out of the box, such as: handling gestures, collisions, and applying real world lighting effects to objects.
 
@@ -40,6 +41,21 @@ _RealityKit mapping of virtual object on table_
 
 
 -----
+
+# ARKit 
+
+ARKit is an augmented reality framework for iOS, available on both iPhone and iPad. ARKit lets developers place digital objects in the real world by blending the camera on the screen with virtual objects, allowing users to interact with these objects in a real space.
+
+It does this by using the camera on iOS devices to create a map of the area, detecting things like tabletops, floors and the location of the device in the physical space using CoreMotion data. No calibration is required from the user.
+
+ARKit can run on most modern iPhones and iPads, utilizing SceneKit integration to render the objects. ARKit also makes it possible to integrate with third-party tools such as Unity and Unreal Engine, to use their rendering capabilities.
+
+-----
+
+# Quick Start (ARKit + SceneKit)
+
+-----
+
 
 # Quick Start (RealityKit)
 
@@ -83,7 +99,16 @@ _Note:  Make sure to enable the **Privacy - Camera Usage Description** setting i
 - **SCNNode** - https://developer.apple.com/documentation/scenekit/scnnode
     - A structural element of a scene graph, representing a position and transform in a 3D coordinate space, to which you can attach geometry, lights, cameras, or other displayable content.
         - File types: .usdz + .reality 
+-----------------
 
+# Media: 
+<img src="https://user-images.githubusercontent.com/61129822/130653683-7d117d64-90b3-4cd9-88f3-6ef8df582a72.jpg" data-canonical-src="https://user-images.githubusercontent.com/61129822/130653683-7d117d64-90b3-4cd9-88f3-6ef8df582a72.jpg" width="250" height="500" />
+
+_Apple Measure App_
+
+<img src="https://user-images.githubusercontent.com/61129822/130653684-2f01d875-8ecd-47e0-92cd-42f0daec07bf.png" data-canonical-src="https://user-images.githubusercontent.com/61129822/130653684-2f01d875-8ecd-47e0-92cd-42f0daec07bf.png" width="250" height="500" />
+
+_Lowes Envision App_
 
 -----------------
 # Resources:  
@@ -127,3 +152,8 @@ _Note:  Make sure to enable the **Privacy - Camera Usage Description** setting i
 - https://www.turbosquid.com
 - https://assetstore.unity.com
 - https://free3d.com/
+
+
+Sources: 
+- TechRepublic ARKit Cheat Sheet: https://www.techrepublic.com/article/apples-arkit-everything-the-pros-need-to-know/
+- Lowes AR App: https://www.marketingdive.com/news/lowes-debuts-2-ar-apps-to-help-people-furnish-their-homes/505798/

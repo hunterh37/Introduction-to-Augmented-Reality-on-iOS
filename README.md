@@ -13,9 +13,8 @@ With such a strong augmented reality platform, it certainly seems Apple is prepa
 # Table of Contents
 
 - Comparision: ARKit + SceneKit vs RealityKit
-- ARKit
 - RealityKit
-- SceneKit
+- ARKit + SceneKit 
 
 # Comparision: ARKit, SceneKit, RealityKit - What's the difference?
 

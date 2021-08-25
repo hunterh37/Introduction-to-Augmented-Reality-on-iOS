@@ -109,6 +109,10 @@ _Apple Measure App_
 
 _Lowes Envision App_
 
+<img src="https://user-images.githubusercontent.com/61129822/130724025-900e514e-a21e-4aac-b2d9-f98cb076b681.png" data-canonical-src="https://user-images.githubusercontent.com/61129822/130724025-900e514e-a21e-4aac-b2d9-f98cb076b681.png" width="250" height="250" />
+
+_Face Tracking_
+
 -----------------
 # Resources:  
 
@@ -138,6 +142,7 @@ _Lowes Envision App_
 - 2021 WWDC Fish Scene: https://developer.apple.com/documentation/realitykit/building_an_immersive_experience_with_realitykit
 - Saving and Loading World Data: https://developer.apple.com/documentation/arkit/data_management/saving_and_loading_world_data#see-also
 - Tracking and Visualizing Planes: https://developer.apple.com/documentation/arkit/content_anchors/tracking_and_visualizing_planes
+- Tracking and Visualizing Faces: https://developer.apple.com/documentation/arkit/content_anchors/tracking_and_visualizing_faces
 
 
 **WWDC Videos**:

@@ -124,12 +124,6 @@ Materials
 
 _____ 
 
-# Quick Start - ARKit + SceneKit Implementation
-
-- coming soon
- 
------
-
 
 # Quick Start - RealityKit Implementation
 
@@ -184,8 +178,9 @@ _Note:  Make sure to enable the **Privacy - Camera Usage Description** setting i
 
 ```swift
 
-// create an entity from local .usdz file
- private func addEntity() {
+ // create an entity from local .usdz file
+
+ func addEntity() {
         let anchor = AnchorEntity()
         let modelEntity = try! Entity.loadModel(named: "Local_Filename_Here")
         
@@ -193,9 +188,9 @@ _Note:  Make sure to enable the **Privacy - Camera Usage Description** setting i
         arView.scene.addAnchor(anchor)
  }
 
-//create a cube entity with texture from remote image url
-
-private func createCubeWithRemoteTexture(remoteUrl: URL) {
+ //create a cube entity with texture from remote image url
+ 
+ func createCubeWithRemoteTexture(remoteUrl: URL) {
         // First create a local temporary file URL to store the image at the remote URL.
         let fileURL = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         // Download contents of imageURL as Data.  Use a URLSession if you want to do this asynchronously.

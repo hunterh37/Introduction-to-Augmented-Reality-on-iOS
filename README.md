@@ -6,18 +6,17 @@
 This page is intended to be an introduction to Augmented Reality on iOS - including frameworks, best practices, resources, and more.  Apple has created a wonderful augmented reality platform - but with technology and frameworks evolving so quickly, things can get a bit confusing.  ARKit, RealityKit, SceneKit, and Metal, are often brought up when discussing an augmented reality application.  Often times discussed in tandem with one another, or sometimes individually, this document will help provide clarity.
 
 
-# Future of Augmented Reality Applications on iOS
-
-- RealityKit + SwiftUI + Apple Silicon = Apple Glasses
-
-With such a strong augmented reality platform, it certainly seems Apple is preparing for their launch of Apple Glasses.  These tools and frameworks have been quietly brewing in the background - the major bugs, flaws, and quirks, have all been worked out. Apple Glasses might spark a consumer revolution similar to the first iPhone, so developers and anyone involved in mobile app development should pay attention to this space.
-
-
 # Table of Contents
 
 - Comparision: ARKit + SceneKit vs RealityKit
+- ARKit
 - RealityKit
-- ARKit + SceneKit 
+- Common Components in an Augmented Reality Application
+- Media
+- Resources
+- Apple Example Projects
+- Conclusion / Future of AR Apps on iOS
+
 
 # Comparision: ARKit, SceneKit, RealityKit - What's the difference?
 
@@ -55,25 +54,35 @@ It does this by using the camera on iOS devices to create a map of the area, det
 ARKit can run on most modern iPhones and iPads, utilizing SceneKit integration to render the objects. ARKit also makes it possible to integrate with third-party tools such as Unity and Unreal Engine, to use their rendering capabilities.
 
 ARKit Features
-- Face Tracking
+- [Face Tracking](https://developer.apple.com/documentation/arkit/content_anchors/tracking_and_visualizing_faces)
 - Front + Back Camera data collection
-- People / Object Occlusion
+- [People / Object Occlusion](https://developer.apple.com/documentation/arkit/camera_lighting_and_effects/occluding_virtual_content_with_people)
 - Lighting & Shadows estimation
 - Motion Capture (body tracking)
 - Scene Understanding (Surface detection)
-- World Tracking (maps + camera data)
-- ARWorldMaps (Save and relaunch a scene as a world map)
+- [World Tracking](https://developer.apple.com/documentation/arkit/arworldtrackingconfiguration)
+- [ARWorldMaps](https://developer.apple.com/documentation/arkit/arworldmap) (Save and relaunch a scene as a world map)
+- [Location Anchors](https://developer.apple.com/documentation/arkit/content_anchors/tracking_geographic_locations_in_ar)
 - Multiplayer Connectivity
+
+<p>
+<img width="141" alt="RealityKit-Logo" src="https://user-images.githubusercontent.com/61129822/131062968-7b24dba8-b146-454a-8f47-fd8aaaae57a5.png">
+ -
+<img width="371" alt="RealityKit-Logo" src="https://user-images.githubusercontent.com/61129822/131062986-fd0ecc65-ed25-423d-988c-0df3f45b7a7e.jpg">
+</p>
+
 
 -----
 
 <img width="171" alt="RealityKit-Logo" src="https://user-images.githubusercontent.com/61129822/131022417-f952a41c-22ed-45ce-96bd-e4365b8bd781.png">
 
-# RealityKit
+# RealityKit 
 
 The RealityKit framework was built from the ground up specifically for augmented reality with photo-realistic rendering, camera effects, animations, physics, and more. With native Swift APIs, ARKit integration, incredibly realistic physics-based rendering, transform and skeletal animations, spatial audio, and rigid body physics, RealityKit makes AR development faster and easier than ever before.
 
+
 RealityKit Features
+
 - Leverages data from ARKit for realistic rendering of augmented reality experiences 
 - Gesture handling (tap to move objects)
 - Animations (start or stop multiple animations on different objects)
@@ -93,12 +102,14 @@ Materials
 
 _____ 
 
-# Quick Start (ARKit + SceneKit)
+# Quick Start - ARKit + SceneKit Implementation
 
+- coming soon
+ 
 -----
 
 
-# Quick Start (RealityKit)
+# Quick Start - RealityKit Implementation
 
 Quickly add a .usdz file to an ```ARView```  using ```Entity.load  ```
 ```swift
@@ -125,21 +136,90 @@ _Note:  Make sure to enable the **Privacy - Camera Usage Description** setting i
 
 # Common Components in an Augmented Reality Application
 
-- **ARView** (RealityKit) - https://developer.apple.com/documentation/realitykit/arview
+
+<img width="400" alt="ARKit-Logo" src="https://user-images.githubusercontent.com/61129822/131063043-18e1c9d8-bf40-4fd4-bc95-399d149acc07.png">
+
+
+- [ARView](https://developer.apple.com/documentation/realitykit/arview)
     - _A view that displays an augmented reality experience that incorporates content from RealityKit._
     - This is what allows us to see 3d models placed into the environment, using the camera view. 
 
-- **ARSCNView** (ARKit + SceneKit) - https://developer.apple.com/documentation/arkit/arscnview
-    - _A view that blends virtual 3d content from SceneKit into your augmented reality experience._
-    - This is the SceneKit implementation for placing a 3d model into the environment.
+- [Scene](https://developer.apple.com/documentation/realitykit/scene)
+    - A container that holds the collection of entities rendered by an AR view.
+    - You don’t create a Scene instance directly. Instead, you get the one and only scene associated with a view from the scene property of an ARView instance.
+    - To add content to the view’s scene, you first create and add one or more AnchorEntity instances to the scene’s anchors collection.
 
-- **Scene** -  https://developer.apple.com/documentation/arkit/arscnview/2875547-scene
-    - The SceneKit scene to be displayed in the view.
-        - Can be a single 3d model, or a collection of models bundled together into a scene.
+- [AnchorEntity](https://developer.apple.com/documentation/realitykit/anchorentity) 
+    - Anchors tell RealityKit how to pin virtual content to real world objects, like flat surfaces or images. You then add a hierarchy of other Entity instances to each anchor to indicate the geometry and behaviors that RealityKit should render at a given anchor point.
 
-- **SCNNode** - https://developer.apple.com/documentation/scenekit/scnnode
-    - A structural element of a scene graph, representing a position and transform in a 3D coordinate space, to which you can attach geometry, lights, cameras, or other displayable content.
-        - File types: .usdz + .reality 
+- [Entity](https://developer.apple.com/documentation/realitykit/entity)
+    - An element of a RealityKit scene to which you attach components that provide appearance and behavior characteristics for the entity.
+    - You create and configure entities to embody objects that you want to place in the real world in an AR app. You do this by adding Entity instances to the Scene instance associated with an ARView.
+
+----------------
+
+# Useful Snippets
+
+```swift
+
+// create an entity from local .usdz file
+ private func addEntity() {
+        let anchor = AnchorEntity()
+        let modelEntity = try! Entity.loadModel(named: "Local_Filename_Here")
+        
+        anchor.addChild(modelEntity)
+        arView.scene.addAnchor(anchor)
+ }
+
+//create a cube entity with texture from remote image url
+
+private func createCubeWithRemoteTexture(remoteUrl: URL) {
+        // First create a local temporary file URL to store the image at the remote URL.
+        let fileURL = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        // Download contents of imageURL as Data.  Use a URLSession if you want to do this asynchronously.
+        let data = try! Data(contentsOf: remoteURL)
+        
+        // Write the image Data to the file URL.
+        try! data.write(to: fileURL)
+        do {
+            // Create a TextureResource by loading the contents of the file URL.
+            let texture = try TextureResource.load(contentsOf: fileURL)
+            var material = SimpleMaterial()
+            material.baseColor = MaterialColorParameter.texture(texture)
+         
+            let entity = ModelEntity(mesh: .generateBox(size: 0.5), materials: [material])
+            let anchor = AnchorEntity(.plane(.any, classification: .any, minimumBounds: .zero))
+            
+            entity.generateCollisionShapes(recursive: true)
+            arView.installGestures(for: entity)
+            
+            anchor.addChild(entity)
+            arView.scene.addAnchor(anchor)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+
+
+
+//save an AR world map to url
+
+func writeWorldMap(_ worldMap: ARWorldMap, to url: URL) throws {
+    let data = try NSKeyedArchiver.archivedData(withRootObject: worldMap, requiringSecureCoding: true)
+    try data.write(to: url)
+}
+
+//load an AR worldmap from url
+
+func loadWorldMap(from url: URL) throws -> ARWorldMap {
+    let mapData = try Data(contentsOf: url)
+    guard let worldMap = try NSKeyedUnarchiver.unarchivedObject(ofClass: ARWorldMap.self, from: mapData)
+        else { throw ARError(.invalidWorldMap) }
+    return worldMap
+}
+
+```
+
 -----------------
 
 # Media: 
@@ -210,6 +290,14 @@ Sources:
 - TechRepublic ARKit Cheat Sheet: https://www.techrepublic.com/article/apples-arkit-everything-the-pros-need-to-know/
 - Lowes AR App: https://www.marketingdive.com/news/lowes-debuts-2-ar-apps-to-help-people-furnish-their-homes/505798/
 - Shaders: https://maxxfrazer.medium.com/getting-started-with-realitykit-shaders-468c55738f8e
+
+
+# Conclusion / Future of AR Apps on iOS
+
+- RealityKit + SwiftUI + Apple Silicon = Apple Glasses
+
+With such a strong augmented reality platform, it certainly seems Apple is preparing for their launch of Apple Glasses.  These tools and frameworks have been quietly brewing in the background - the major bugs, flaws, and quirks, have all been worked out. Apple Glasses might spark a consumer revolution similar to the first iPhone, so developers and anyone involved in mobile app development should pay attention to this space.
+
 
 
 

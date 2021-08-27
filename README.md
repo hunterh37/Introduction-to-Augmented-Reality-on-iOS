@@ -78,6 +78,8 @@ RealityKit Features
 - Gesture handling (tap to move objects)
 - Animations (start or stop multiple animations on different objects)
 - Shaders (allows for complex rendering of objects)
+- Physics (Object movement and collision)
+- Lighting & Shadows estimation
 
 Materials
 
@@ -167,6 +169,9 @@ https://developer.apple.com/augmented-reality/tools/
 - Reality Composer - found within Xcode developer menu 
 
 - Reality Converter - Download from Apple website, allows for quick conversion of common 3d media formats into .usdz or .reality for ARKit compatibility. Common filetypes include: .fbx and .obj
+
+- Object Capture - https://developer.apple.com/augmented-reality/object-capture/
+      - Turn photos from your iPhone or iPad into high‑quality 3D models that are optimized for AR using the new Object Capture API on macOS Monterey. Object Capture uses photogrammetry to turn a series of pictures taken on your iPhone or iPad into USDZ files that can be viewed in AR
 
 **Useful Links (Apple.com)**
 

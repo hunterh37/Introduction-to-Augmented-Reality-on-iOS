@@ -8,14 +8,14 @@ This page is intended to be an introduction to Augmented Reality on iOS - includ
 
 # Table of Contents
 
-- Comparision: ARKit + SceneKit vs RealityKit
-- ARKit
-- RealityKit
-- Common Components in an Augmented Reality Application
-- Media
-- Resources
-- Apple Example Projects
-- Conclusion / Future of AR Apps on iOS
+- [Comparision: ARKit + SceneKit vs RealityKit](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS#comparision-arkit-scenekit-realitykit---whats-the-difference)
+- [ARKit](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS#arkit)
+- [RealityKit](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS#realitykit)
+- [Common Components in an Augmented Reality Application](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS#common-components-in-an-augmented-reality-application)
+- [Media](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS#media)
+- [Resources](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS#resources)
+- [Apple Example Projects](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS#resources)
+- [Conclusion / Future of AR Apps on iOS](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS#conclusion--future-of-ar-apps-on-ios)
 
 
 # Comparision: ARKit, SceneKit, RealityKit - What's the difference?

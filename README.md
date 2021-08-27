@@ -7,12 +7,12 @@ This page is intended to be an introduction to Augmented Reality on iOS - includ
 
 
 # Table of Contents
-
+- [Examples and Media](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS/blob/main/README.md#examples-and-media)
 - [Comparision: ARKit + SceneKit vs RealityKit](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS#comparision-arkit-scenekit-realitykit---whats-the-difference)
 - [ARKit](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS#arkit)
 - [RealityKit](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS#realitykit)
 - [Common Components in an Augmented Reality Application](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS#common-components-in-an-augmented-reality-application)
-- [Media](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS#media)
+- [More Media](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS#media)
 - [Resources](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS#resources)
 - [Apple Example Projects](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS#resources)
 - [Conclusion / Future of AR Apps on iOS](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS#conclusion--future-of-ar-apps-on-ios)

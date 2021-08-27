@@ -18,6 +18,28 @@ This page is intended to be an introduction to Augmented Reality on iOS - includ
 - [Conclusion / Future of AR Apps on iOS](https://github.com/hunterh37/Introduction-to-Augmented-Reality-on-iOS#conclusion--future-of-ar-apps-on-ios)
 
 
+# Examples and Media
+
+First let's look at what is currently on the market, and previews of the most cutting edge augmented reality experiences.
+
+<img width="350" alt="ARKit-Logo" src="https://user-images.githubusercontent.com/61129822/131150878-61782cff-2061-4552-8571-00236b0e26ed.gif">
+
+[Reality-UI](https://github.com/maxxfrazer/RealityUI) - a framework for building user interfaces in Augmented Reality
+
+----
+
+<img width="250" alt="ARKit-Logo" src="https://user-images.githubusercontent.com/61129822/131151429-56986c62-0e87-4d54-809e-3474565c18dd.gif">
+
+
+[ARKit-CoreLocation framework](https://github.com/ProjectDent/ARKit-CoreLocation)
+
+----
+
+<img width="250" alt="ARKit-Logo" src="https://user-images.githubusercontent.com/61129822/131152231-a0fa4803-e45f-4700-a265-67d9c67504eb.gif">
+
+[CoreML-ARKit](https://github.com/hanleyweng/CoreML-in-ARKit) - an example project using machine learning and ARKit to display labels above objects
+
+
 # Comparision: ARKit, SceneKit, RealityKit - What's the difference?
 
 Apple’s ARKit platform was originally built on top of SceneKit — a 3D graphics framework developed for mobile games. This gave a solid foundation to  leverage SceneKit’s rendering technology to create an early platform for augmented reality applications. **RealityKit** was introduced after **ARKit and SceneKit,** as a way to simplify the workflow of creating an augmented reality application. RealityKit offers many features out of the box, such as: handling gestures, collisions, and applying real world lighting effects to objects.
@@ -266,10 +288,10 @@ https://developer.apple.com/augmented-reality/tools/
 - Tracking and Visualizing Planes: https://developer.apple.com/documentation/arkit/content_anchors/tracking_and_visualizing_planes
 - Tracking and Visualizing Faces: https://developer.apple.com/documentation/arkit/content_anchors/tracking_and_visualizing_faces
 
-**Other Example Projects:**
+**Other Example Projects & Frameworks:**
 
 - [ARKit Sampler](https://github.com/shu223/ARKit-Sampler) - a sample implementation of many ARKit features.
-
+- [RealityUI](https://github.com/maxxfrazer/RealityUI) - a framework for building user interfaces in AR
 
 
 **3D Model Marketplaces**

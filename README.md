@@ -266,6 +266,11 @@ https://developer.apple.com/augmented-reality/tools/
 - Tracking and Visualizing Planes: https://developer.apple.com/documentation/arkit/content_anchors/tracking_and_visualizing_planes
 - Tracking and Visualizing Faces: https://developer.apple.com/documentation/arkit/content_anchors/tracking_and_visualizing_faces
 
+**Other Example Projects:**
+
+- [ARKit Sampler](https://github.com/shu223/ARKit-Sampler) - a sample implementation of many ARKit features.
+
+
 
 **3D Model Marketplaces**
 
@@ -290,6 +295,7 @@ Sources:
 - TechRepublic ARKit Cheat Sheet: https://www.techrepublic.com/article/apples-arkit-everything-the-pros-need-to-know/
 - Lowes AR App: https://www.marketingdive.com/news/lowes-debuts-2-ar-apps-to-help-people-furnish-their-homes/505798/
 - Shaders: https://maxxfrazer.medium.com/getting-started-with-realitykit-shaders-468c55738f8e
+- ARKit Sample Project: https://github.com/shu223/ARKit-Sampler
 
 
 # Conclusion / Future of AR Apps on iOS
